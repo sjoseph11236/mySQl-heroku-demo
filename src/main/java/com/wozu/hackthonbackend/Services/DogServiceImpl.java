@@ -22,4 +22,9 @@ public class DogServiceImpl implements DogService {
     public void postDogFromDogApi(Dog dog){
         dogRepo.save(dog);
     }
+
+    @Override
+    public Iterable<Dog> getAllDogs() {
+        return dogRepo.findAll();
+    }
 }

@@ -16,6 +16,11 @@ public class DogController {
     @Autowired
     DogServiceImpl dogServiceImpl;
 
+    @GetMapping("/get/dogs")
+    public Iterable<Dog> getAllDogs() {
+        return dogServiceImpl.getAllDogs();
+    }
+
     @GetMapping("/dog")
     public Dog getDog() {
         return dogServiceImpl.getDogFromDogApi();
